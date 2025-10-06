@@ -15,6 +15,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class WelcomeController {
   public ArrayList<User> users = new ArrayList<User>();
 
+  // Database
+  @GetMapping("/database")
+  public String showDatabase(Model model) {
+    model.addAttribute("Users", users);
+    return "database";
+  }
+
   // Register
   @GetMapping("/register")
   public String showRegisterForm() {
