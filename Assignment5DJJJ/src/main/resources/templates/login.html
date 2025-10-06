@@ -10,27 +10,19 @@
     <center>
     <h1>Login</h1>
     <h2 th:if="${message}" th:text="${message}">Invalid username or password.</h2>
-<form th:action="@{/login}" method="post">
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" value=""><br><br>
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" value=""><br><br>
-  <input type="submit" value="Submit">
-</form> 
-
         <div class="login-container">
         <div class="login-card">
             <div class="login-header">
                 <div class="logo-icon"><img src="DJJJDesigner.png" alt="DJJJ Designer Logo" width="200"></div>
-                <h2>Sign In</h2>
+                <h2>Log In</h2>
                 <p>Access your account</p>
             </div>
 
-            <form class="login-form" id="loginForm" novalidate>
+            <form th:action="@{/login}" method="post">
                 <div class="form-group">
                     <div class="input-wrapper">
-                        <input type="email" id="email" name="email" required autocomplete="email">
-                        <label for="email">Email</label>
+                        <input type="text" id="email" name="username" required autocomplete="text">
+                        <label for="email">Username</label>
                         <span class="input-line"></span>
                     </div>
                     <span class="error-message" id="emailError"></span>
@@ -61,7 +53,7 @@
 
                 
                 <button type="submit" class="login-btn btn">
-                    <span class="btn-text">Sign In</span>
+                    <span class="btn-text">Log In</span>
                     <span class="btn-loader"></span>
                     <span class="btn-glow"></span>
                 </button>
