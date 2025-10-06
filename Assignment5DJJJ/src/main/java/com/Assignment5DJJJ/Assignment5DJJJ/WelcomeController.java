@@ -26,15 +26,13 @@ public class WelcomeController {
 
   // welcome button
   @PostMapping("/click")
-  public String postMethodName(@RequestBody 
-    //TODO: process POST request
-   
-
-  ("/click")
-  public String welcomeButton(Model model) {
-      return "database";
+  public String postMethodName(Model model){ 
+     return "database";
   }
-  
+
+  public String welcomeButton(Model model) {
+    return "database";
+  }
 
   // Home
   @GetMapping("/")
