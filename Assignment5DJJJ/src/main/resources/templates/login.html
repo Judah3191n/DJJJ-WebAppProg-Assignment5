@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/loginstyle.css">
+<<<<<<< Updated upstream
+    <title>Document</title>
+=======
+    <link rel="stylesheet" href="../login.css">
     <title>Login</title>
+>>>>>>> Stashed changes
 </head>
 <body>
-    <center>
-    <h1>Login</h1>
-    <h2 th:if="${message}" th:text="${message}">Invalid username or password.</h2>
-<form th:action="@{/login}" method="post">
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" value=""><br><br>
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" value=""><br><br>
-  <input type="submit" value="Submit">
-</form> 
-
-<p>Please enter your credentials.</p>
-<p>If you aren't registered, please sign up first.</p>
-<a href="/register">Click here to register</a>
-</center>
-<footer>
-    <p>&copy; 2025 DJJJ. All rights reserved.</p>
-</footer>
+    
 </body>
 </html>
