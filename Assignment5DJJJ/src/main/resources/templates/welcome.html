@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../welcomestyle.css">
+    <title>Welcome</title>
 </head>
 <body>
-    
+    <h1 th:text="'Welcome, ' + ${username} + '!'">Welcome!</h1>
+    <p><a th:href="@{/logout}">Log Out</a> through the gift shop.</p>
+    <img src="/images/Designer.jpeg" alt="Construction carton">
+    <footer>
+    <p>&copy; 2025 DJJJ. All rights reserved.</p>
+</footer>
 </body>
 </html>
