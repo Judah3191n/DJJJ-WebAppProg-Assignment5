@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../welcomestyle.css">
+    <link rel="stylesheet" href="/welcome.css">
     <title>Welcome</title>
 </head>
 <body>
     <h1 th:text="'Welcome, ' + ${username} + '!'">Welcome!</h1>
+    <img src="DJJJDesigner.png" alt="DJJJ Designer Logo" width="200">
     <p><a th:href="@{/logout}">Log Out</a></p>
     <footer>
     <p>&copy; 2025 DJJJ. All rights reserved.</p>

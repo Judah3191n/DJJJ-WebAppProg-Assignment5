@@ -9,6 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import jakarta.servlet.http.HttpSession;
+
 import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
@@ -20,6 +23,13 @@ public class WelcomeController {
   public String showDatabase(Model model) {
     model.addAttribute("Users", users);
     return "database";
+  }
+
+  // Home
+  @GetMapping("/home")
+  public String showHome() {
+    return "home";
+
   }
 
   // Register
@@ -61,5 +71,11 @@ public class WelcomeController {
      * }
      */
     return "welcome";
+  }
+
+  @GetMapping("/logout")
+  public String logout(HttpSession session) {
+    session.invalidate(); // This clears all session attributes
+    return "redirect:/login"; // Redirect to login page
   }
 }
