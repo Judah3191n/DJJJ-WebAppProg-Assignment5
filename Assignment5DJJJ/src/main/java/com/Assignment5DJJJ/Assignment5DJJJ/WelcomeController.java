@@ -78,4 +78,12 @@ public class WelcomeController {
     session.invalidate(); // This clears all session attributes
     return "redirect:/login"; // Redirect to login page
   }
+
+  // Welcome
+  @PostMapping("/click")
+  public String postMethodName(Model model) {
+
+    return "database";
+  }
+
 }
