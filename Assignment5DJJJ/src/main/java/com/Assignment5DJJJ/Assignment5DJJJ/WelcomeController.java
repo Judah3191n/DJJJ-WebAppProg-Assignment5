@@ -17,7 +17,7 @@ public class WelcomeController {
     public String processLogin(@RequestParam String username, @RequestParam String password, Model model) {
       model.addAttribute("username", username);
       model.addAttribute("password", password);
-
+        /* 
         if ("user".equals(username) && "pass".equals(password)) {
             model.addAttribute("message", "Login successful!");
             return "welcome";
@@ -25,6 +25,8 @@ public class WelcomeController {
             model.addAttribute("message", "Invalid username or password.");
             return "login";
         }
+            */
+            return "login";
     }
 
   
