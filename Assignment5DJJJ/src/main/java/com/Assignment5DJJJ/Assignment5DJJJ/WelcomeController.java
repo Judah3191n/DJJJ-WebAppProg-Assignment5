@@ -18,6 +18,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class WelcomeController {
   public ArrayList<User> users = new ArrayList<User>();
 
+  // Home
+  @GetMapping("/home")
+  public String showHome(){
+    return "home";
+  }
+
   // Register
   @GetMapping("/register")
   public String showRegisterForm() {
