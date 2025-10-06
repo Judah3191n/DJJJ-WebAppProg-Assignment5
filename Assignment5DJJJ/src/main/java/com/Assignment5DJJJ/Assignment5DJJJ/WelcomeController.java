@@ -26,7 +26,7 @@ public class WelcomeController {
             return "login";
         }
             */
-            return "login";
+            return "welcome";
     }
 
   
