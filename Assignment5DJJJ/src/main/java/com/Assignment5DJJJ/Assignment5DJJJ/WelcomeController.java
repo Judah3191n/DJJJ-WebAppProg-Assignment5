@@ -18,10 +18,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class WelcomeController {
   public ArrayList<User> users = new ArrayList<User>();
 
+  // Database
+  @GetMapping("/database")
+  public String showDatabase() {
+    return "database";
+  }
+
   // Home
-  @GetMapping("/")
-  public String showHome(){
+  @GetMapping("/home")
+  public String showHome() {
     return "home";
+
   }
 
   // Register
@@ -31,15 +38,15 @@ public class WelcomeController {
   }
 
   @PostMapping("/register")
-  public String postMethodName(@RequestParam String username, @RequestParam String password, @RequestParam String email,
-      @RequestParam String address, Model model) {
+  public String registerUser(@RequestParam String username, @RequestParam String password, @RequestParam String email,
+      @RequestParam String address, @RequestParam String phoneNumber, Model model) {
     for (User user : users) {
       if (user.getName().equals(username)) {
         model.addAttribute("usernameError", "Username already taken");
         return "register";
       }
     }
-    users.add(new User(username, password, email, address));
+    users.add(new User(username, password, email, address, phoneNumber));
     return "login";
   }
 
@@ -71,12 +78,4 @@ public class WelcomeController {
     return "redirect:/login"; // Redirect to login page
   }
 
-  // Welcome
-  @PostMapping("/click")
-  public String postMethodName(Model model) {
-
-    return "database";
-  }
-
 }
-
