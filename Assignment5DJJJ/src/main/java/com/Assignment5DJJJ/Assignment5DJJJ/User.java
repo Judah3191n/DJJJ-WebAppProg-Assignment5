@@ -8,11 +8,12 @@ public class User {
     private String creditCard;
     private String password;
 
-    public User(String name, String password, String email, String address) {
+    public User(String name, String password, String email, String address, String phoneNumber) {
         this.setName(name);
         this.setEmail(email);
         this.setPassword(password);
         this.setAddress(address);
+        this.setPhoneNumber(phoneNumber);
         this.setCreditCard(generateCreditCard());
     }
 

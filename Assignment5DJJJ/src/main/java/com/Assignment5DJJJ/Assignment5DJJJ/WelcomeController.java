@@ -40,14 +40,14 @@ public class WelcomeController {
 
   @PostMapping("/register")
   public String postMethodName(@RequestParam String username, @RequestParam String password, @RequestParam String email,
-      @RequestParam String address, Model model) {
+      @RequestParam String address, @RequestParam String phoneNumber, Model model) {
     for (User user : users) {
       if (user.getName().equals(username)) {
         model.addAttribute("usernameError", "Username already taken");
         return "register";
       }
     }
-    users.add(new User(username, password, email, address));
+    users.add(new User(username, password, email, address, phoneNumber));
     return "login";
   }
 
