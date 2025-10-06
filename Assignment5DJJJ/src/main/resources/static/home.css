@@ -2,8 +2,17 @@ body{
     background-color: #030712
 }
 div{
+    /* display: flex;
+    align-content: center; */
+    width: 600px;
     margin: 0 auto;
-    background-color: #030712;
+    background-color: #4a4e5c;
+    color: white;
+    border: 5px solid #666b80;
+    text-align: center;
+    /* border-color: white;
+    border-radius: 10px;
+    border-width: solid; */
 }
 html{
     background-color: #030712;

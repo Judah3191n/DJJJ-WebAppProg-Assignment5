@@ -19,7 +19,7 @@ public class WelcomeController {
   public ArrayList<User> users = new ArrayList<User>();
 
   // Home
-  @GetMapping("/home")
+  @GetMapping("/")
   public String showHome(){
     return "home";
   }
