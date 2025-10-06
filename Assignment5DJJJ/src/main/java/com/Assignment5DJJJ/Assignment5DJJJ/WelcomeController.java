@@ -34,6 +34,7 @@ public class WelcomeController {
     return "login";
   }
 
+  // Login
   @GetMapping("/login")
   public String showLoginForm() {
     return "login";
