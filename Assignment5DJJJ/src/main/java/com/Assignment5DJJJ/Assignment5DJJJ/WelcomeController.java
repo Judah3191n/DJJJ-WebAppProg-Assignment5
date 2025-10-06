@@ -18,6 +18,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class WelcomeController {
   public ArrayList<User> users = new ArrayList<User>();
 
+  // Database
+  @GetMapping("/database")
+  public String showDatabase(Model model) {
+    model.addAttribute("Users", users);
+    return "database";
+  }
+
+  // Home
+  @GetMapping("/home")
+  public String showHome() {
+    return "home";
+
+  }
+
   // Register
   @GetMapping("/register")
   public String showRegisterForm() {
@@ -65,4 +79,3 @@ public class WelcomeController {
     return "redirect:/login"; // Redirect to login page
   }
 }
-
